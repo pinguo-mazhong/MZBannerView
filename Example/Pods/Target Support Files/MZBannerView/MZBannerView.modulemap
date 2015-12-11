@@ -1,0 +1,6 @@
+framework module MZBannerView {
+  umbrella header "MZBannerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

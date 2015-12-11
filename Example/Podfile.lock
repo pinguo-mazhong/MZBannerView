@@ -1,0 +1,14 @@
+PODS:
+  - MZBannerView (0.1.0)
+
+DEPENDENCIES:
+  - MZBannerView (from `../`)
+
+EXTERNAL SOURCES:
+  MZBannerView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MZBannerView: 01f16ffa611253f69a7391a523398052ce22d8d1
+
+COCOAPODS: 0.38.2

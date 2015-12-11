@@ -1,0 +1,25 @@
+{
+  "name": "MZBannerView",
+  "version": "0.1.0",
+  "summary": "A short description of MZBannerView.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/MZBannerView",
+  "license": "MIT",
+  "authors": {
+    "mz": "mazhong@camera360.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/MZBannerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "MZBannerView": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
