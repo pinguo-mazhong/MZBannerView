@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'MZBannerView_Example', :exclusive => true do
+  pod "MZBannerView", :path => "../"
+end
+
+target 'MZBannerView_Tests', :exclusive => true do
+  pod "MZBannerView", :path => "../"
+
+  
+end
