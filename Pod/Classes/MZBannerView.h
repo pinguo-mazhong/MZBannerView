@@ -8,18 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-typedef NS_ENUM(NSInteger, MZBannerViewPageControlStyle) {
-    /**
-     *  系统自带经典样式
-     */
-    MZBannerViewPageControlStyleClassic,
-    /**
-     *  带动画的样式
-     */
-    MZBannerViewPageControlStyleAnimated,
-};
-
 typedef NS_ENUM(NSInteger, MZBannerViewPageControlAlignment)
 {
     MZBannerViewPageControlAlignmentCenter,
@@ -70,10 +58,6 @@ typedef NS_ENUM(NSInteger, MZBannerViewPageControlAlignment)
  *  只有一个item时隐藏pageControl，默认YES
  */
 @property (nonatomic) BOOL hidesForSinglePage;
-/**
- *  pageControl样式，默认为动画样式
- */
-@property (nonatomic) MZBannerViewPageControlStyle pageControlStyle;
 /**
  *  pageControl的位置，默认居中
  */
