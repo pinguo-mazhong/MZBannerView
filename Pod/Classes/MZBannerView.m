@@ -283,6 +283,14 @@
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.delegate respondsToSelector:@selector(bannerView:didScrollToItemAtIndex:)])
+    {
+        [self.delegate bannerView:self didScrollToItemAtIndex:indexPath.item % self.itemsArray.count];
+    }
+}
+
 #pragma mark UIScrollView delegate method
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

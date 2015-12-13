@@ -9,7 +9,7 @@
 #import "MZViewController.h"
 #import <MZBannerView/MZBannerView.h>
 
-@interface MZViewController ()
+@interface MZViewController () <MZBannerViewDelegate>
 @property (nonatomic) MZBannerView *bannerView;
 @property (nonatomic) CGRect originFrame;
 @end
