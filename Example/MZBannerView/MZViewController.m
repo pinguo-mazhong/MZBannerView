@@ -7,12 +7,11 @@
 //
 
 #import "MZViewController.h"
-#import "MZBannerView.h"
+#import <MZBannerView/MZBannerView.h>
 
 @interface MZViewController ()
 @property (nonatomic) MZBannerView *bannerView;
 @property (nonatomic) CGRect originFrame;
-@end
 @end
 
 @implementation MZViewController
@@ -44,8 +43,6 @@
     UIView *redView = [[UIView alloc] initWithFrame:self.originFrame];
     redView.backgroundColor = [UIColor redColor];
 
-
-
     // 情景一：采用本地图片实现
     NSArray *images = @[[UIImage imageNamed:@"h1.jpg"],
                         greenView,
@@ -57,12 +54,11 @@
                         ];
 
 
-    self.bannerView = [ cycleScrollViewWithFrame:self.originFrame imagesGroup:images];
+    self.bannerView = [MZBannerView bannerViewWithFrame:self.originFrame items:images];
 
     self.bannerView.infiniteLoop = YES;
     //    self.bannerView.autoScrollTimeInterval = 5;
     self.bannerView.delegate = self;
-    self.bannerView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     [scrollView addSubview:self.bannerView];
 
     [self.view addSubview:scrollView];
@@ -91,7 +87,11 @@
 
 #pragma mark - SDCycleScrollViewDelegate
 
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+- (void)bannerView:(MZBannerView *)bannerView didScrollToItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---轮播到第%ld张图片", index);
+}
+- (void)bannerView:(MZBannerView *)bannerView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"---点击了第%ld张图片", index);
 }
